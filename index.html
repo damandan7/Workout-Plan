@@ -5,93 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SHREDDED - Weekly Workout Plan</title>
     <style>
+        /* Add your CSS styles here */
         body {
-            background-color: #1d1d1d;
-            color: #fff;
+            background-color: black;
+            color: white;
             font-family: Arial, sans-serif;
-        }
-
-        #container {
-            width: 80%;
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #333;
-            border-radius: 10px;
+            text-align: center;
         }
 
         h1 {
-            text-align: center;
-            color: #007BFF;
+            font-size: 28px;
         }
 
         h2 {
-            margin-top: 20px;
-            color: #007BFF;
+            font-size: 24px;
+            text-decoration: underline;
         }
 
         ul {
-            list-style-type: none;
+            list-style: none;
             padding: 0;
         }
 
         li {
-            margin: 10px 0;
-            display: flex;
-            align-items: center;
-        }
-
-        input[type="checkbox"] {
-            margin-right: 10px;
-        }
-
-        input[type="text"] {
-            width: 50px;
-            margin-left: 10px;
-            padding: 5px;
-            border: 1px solid #007BFF;
-            border-radius: 5px;
-            background-color: #1d1d1d;
-            color: #fff;
-        }
-
-        .checked {
-            text-decoration: line-through;
-            color: gray;
+            margin-bottom: 10px;
         }
 
         button {
             background-color: #007BFF;
             color: white;
-            padding: 5px 10px;
             border: none;
-            border-radius: 5px;
+            padding: 5px 10px;
             cursor: pointer;
         }
 
-        button:hover {
-            background-color: #0056b3;
-        }
-
         .tech-button {
-            background-color: #28a745;
+            background-color: #28A745;
         }
 
-        .tech-button:hover {
-            background-color: #1d8f5e;
-        }
-
-        #reset-button {
-            display: block;
-            margin: 20px auto;
-            background-color: #e74c3c;
-        }
-
-        #reset-button:hover {
-            background-color: #c04131;
-        }
-
-        /* Popup Styles */
         .tech-popup {
             display: none;
             position: fixed;
@@ -104,134 +55,133 @@
         }
 
         .tech-popup-content {
-            background-color: #333;
-            color: #fff;
-            border-radius: 5px;
-            padding: 20px;
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 70%;
+            background-color: #333;
+            padding: 20px;
+            border-radius: 5px;
         }
 
         .tech-popup-close {
             position: absolute;
             top: 10px;
             right: 10px;
+            font-size: 20px;
+            color: white;
             cursor: pointer;
-            color: #fff;
         }
     </style>
 </head>
 <body>
     <div id="container">
         <h1>SHREDDED - My Weekly Workout Plan</h1>
-        
-        <!-- Monday -->
-        <h2>Monday</h2>
+
+        <!-- Monday (Chest Day) -->
+        <h2>Monday (Chest Day)</h2>
         <ul id="monday-list">
             <li>
                 <input type="checkbox" id="exercise1"> Warm-Up
             </li>
             <li>
-                <input type="checkbox" id="exercise2"> Push-Ups (3 sets of 10-12 reps)
+                <input type="checkbox" id="exercise2"> Bench Press (3 sets of 8-10 reps)
                 <input type="text" id="exercise2-weight" placeholder="Weight">
                 <button onclick="saveWeight('exercise2-weight')">Save</button>
-                <button class="tech-button" onclick="showTechPopup('Push-Ups')">Tech</button>
-            </li>
-            <li>
-                <input type="checkbox" id="exercise3"> Dumbbell Rows (3 sets of 10-12 reps per arm)
-                <input type="text" id="exercise3-weight" placeholder="Weight">
-                <button onclick="saveWeight('exercise3-weight')">Save</button>
-                <button class="tech-button" onclick="showTechPopup('Dumbbell Rows')">Tech</button>
-            </li>
-            <!-- Add more exercises for Monday here with checkboxes, weight input fields, and Tech buttons -->
-        </ul>
-
-        <!-- Tuesday -->
-        <h2>Tuesday</h2>
-        <ul id="tuesday-list">
-            <li>
-                <input type="checkbox" id="exercise4"> Cardio (20 minutes)
-            </li>
-            <li>
-                <input type="checkbox" id="exercise5"> Plank (3 sets, hold for 30-60 seconds)
-            </li>
-            <li>
-                <input type="checkbox" id="exercise6"> Russian Twists (3 sets of 12-15 reps per side)
-                <input type="text" id="exercise6-weight" placeholder="Weight">
-                <button onclick="saveWeight('exercise6-weight')">Save</button>
-                <button class="tech-button" onclick="showTechPopup('Russian Twists')">Tech</button>
-            </li>
-            <!-- Add more exercises for Tuesday here with checkboxes, weight input fields, and Tech buttons -->
-        </ul>
-
-        <!-- Wednesday -->
-        <h2>Wednesday</h2>
-        <ul id="wednesday-list">
-            <li>
-                <input type="checkbox" id="exercise7"> Pull-Ups (4 sets of 6-8 reps)
-                <input type="text" id="exercise7-weight" placeholder="Weight">
-                <button onclick="saveWeight('exercise7-weight')">Save</button>
-                <button class="tech-button" onclick="showTechPopup('Pull-Ups')">Tech</button>
-            </li>
-            <li>
-                <input type="checkbox" id="exercise8"> Dumbbell Shoulder Press (3 sets of 10-12 reps)
-                <input type="text" id="exercise8-weight" placeholder="Weight">
-                <button onclick="saveWeight('exercise8-weight')">Save</button>
-                <button class="tech-button" onclick="showTechPopup('Dumbbell Shoulder Press')">Tech</button>
-            </li>
-            <!-- Add more exercises for Wednesday here with checkboxes, weight input fields, and Tech buttons -->
-        </ul>
-
-        <!-- Thursday -->
-        <h2>Thursday</h2>
-        <ul id="thursday-list">
-            <li>
-                <input type="checkbox" id="exercise9"> Cardio (20 minutes)
-            </li>
-            <li>
-                <input type="checkbox" id="exercise10"> Plank (3 sets, hold for 30-60 seconds)
-            </li>
-            <li>
-                <input type="checkbox" id="exercise11"> Russian Twists (3 sets of 12-15 reps per side)
-                <input type="text" id="exercise11-weight" placeholder="Weight">
-                <button onclick="saveWeight('exercise11-weight')">Save</button>
-                <button class="tech-button" onclick="showTechPopup('Russian Twists')">Tech</button>
-            </li>
-            <!-- Add more exercises for Thursday here with checkboxes, weight input fields, and Tech buttons -->
-        </ul>
-
-        <!-- Friday -->
-        <h2>Friday</h2>
-        <ul id="friday-list">
-            <li>
-                <input type="checkbox" id="exercise12"> Cardio (30 minutes)
-            </li>
-            <li>
-                <input type="checkbox" id="exercise13"> Cool Down (10 minutes)
-            </li>
-            <li>
-                <input type="checkbox" id="exercise14"> Bench Press (3 sets of 8-10 reps)
-                <input type="text" id="exercise14-weight" placeholder="Weight">
-                <button onclick="saveWeight('exercise14-weight')">Save</button>
                 <button class="tech-button" onclick="showTechPopup('Bench Press')">Tech</button>
             </li>
             <li>
-                <input type="checkbox" id="exercise15"> Dumbbell Flyes (3 sets of 10-12 reps)
-                <input type="text" id="exercise15-weight" placeholder="Weight">
-                <button onclick="saveWeight('exercise15-weight')">Save</button>
+                <input type="checkbox" id="exercise3"> Dumbbell Flyes (3 sets of 10-12 reps)
+                <input type="text" id="exercise3-weight" placeholder="Weight">
+                <button onclick="saveWeight('exercise3-weight')">Save</button>
                 <button class="tech-button" onclick="showTechPopup('Dumbbell Flyes')">Tech</button>
             </li>
-            <!-- Add more exercises for Friday here with checkboxes, weight input fields, and Tech buttons -->
+            <li>
+                <input type="checkbox" id="exercise4"> Incline Bench Press (3 sets of 8-10 reps)
+                <input type="text" id="exercise4-weight" placeholder="Weight">
+                <button onclick="saveWeight('exercise4-weight')">Save</button>
+                <button class="tech-button" onclick="showTechPopup('Incline Bench Press')">Tech</button>
+            </li>
+            <li>
+                <input type="checkbox" id="exercise5"> Chest Flyes Machine (3 sets of 10-12 reps)
+                <input type="text" id="exercise5-weight" placeholder="Weight">
+                <button onclick="saveWeight('exercise5-weight')">Save</button>
+                <button class="tech-button" onclick="showTechPopup('Chest Flyes Machine')">Tech</button>
+            </li>
+            <!-- Add more chest exercises for Monday here -->
         </ul>
 
-        <!-- Saturday -->
-        <h2>Saturday</h2>
-        <ul id="saturday-list">
+        <!-- Tuesday (Arm Day) -->
+        <h2>Tuesday (Arm Day)</h2>
+        <ul id="tuesday-list">
             <li>
-                <input type="checkbox" id="exercise16"> Cardio (20 minutes)
+                <input type="checkbox" id="exercise6"> Warm-Up
+            </li>
+            <li>
+                <input type="checkbox" id="exercise7"> Bicep Curls (3 sets of 10-12 reps)
+                <input type="text" id="exercise7-weight" placeholder="Weight">
+                <button onclick="saveWeight('exercise7-weight')">Save</button>
+                <button class="tech-button" onclick="showTechPopup('Bicep Curls')">Tech</button>
+            </li>
+            <li>
+                <input type="checkbox" id="exercise8"> Tricep Dips (3 sets of 10-12 reps)
+                <input type="text" id="exercise8-weight" placeholder="Weight">
+                <button onclick="saveWeight('exercise8-weight')">Save</button>
+                <button class="tech-button" onclick="showTechPopup('Tricep Dips')">Tech</button>
+            </li>
+            <li>
+                <input type="checkbox" id="exercise9"> Hammer Curls (3 sets of 10-12 reps)
+                <input type="text" id="exercise9-weight" placeholder="Weight">
+                <button onclick="saveWeight('exercise9-weight')">Save</button>
+                <button class="tech-button" onclick="showTechPopup('Hammer Curls')">Tech</button>
+            </li>
+            <li>
+                <input type="checkbox" id="exercise10"> Skull Crushers (3 sets of 10-12 reps)
+                <input type="text" id="exercise10-weight" placeholder="Weight">
+                <button onclick="saveWeight('exercise10-weight')">Save</button>
+                <button class="tech-button" onclick="showTechPopup('Skull Crushers')">Tech</button>
+            </li>
+            <!-- Add more arm exercises for Tuesday here -->
+        </ul>
+
+        <!-- Wednesday (Legs Day) -->
+        <h2>Wednesday (Legs Day)</h2>
+        <ul id="wednesday-list">
+            <li>
+                <input type="checkbox" id="exercise11"> Warm-Up
+            </li>
+            <li>
+                <input type="checkbox" id="exercise12"> Squats (3 sets of 10-12 reps)
+                <input type="text" id="exercise12-weight" placeholder="Weight">
+                <button onclick="saveWeight('exercise12-weight')">Save</button>
+                <button class="tech-button" onclick="showTechPopup('Squats')">Tech</button>
+            </li>
+            <li>
+                <input type="checkbox" id="exercise13"> Lunges (3 sets of 12-15 reps per leg)
+                <input type="text" id="exercise13-weight" placeholder="Weight">
+                <button onclick="saveWeight('exercise13-weight')">Save</button>
+                <button class="tech-button" onclick="showTechPopup('Lunges')">Tech</button>
+            </li>
+            <li>
+                <input type="checkbox" id="exercise14"> Leg Press (3 sets of 10-12 reps)
+                <input type="text" id="exercise14-weight" placeholder="Weight">
+                <button onclick="saveWeight('exercise14-weight')">Save</button>
+                <button class="tech-button" onclick="showTechPopup('Leg Press')">Tech</button>
+            </li>
+            <li>
+                <input type="checkbox" id="exercise15"> Leg Curls (3 sets of 10-12 reps)
+                <input type="text" id="exercise15-weight" placeholder="Weight">
+                <button onclick="saveWeight('exercise15-weight')">Save</button>
+                <button class="tech-button" onclick="showTechPopup('Leg Curls')">Tech</button>
+            </li>
+            <!-- Add more leg exercises for Wednesday here -->
+        </ul>
+
+        <!-- Thursday (Core Day) -->
+        <h2>Thursday (Core Day)</h2>
+        <ul id="thursday-list">
+            <li>
+                <input type="checkbox" id="exercise16"> Warm-Up
             </li>
             <li>
                 <input type="checkbox" id="exercise17"> Plank (3 sets, hold for 30-60 seconds)
@@ -242,22 +192,60 @@
                 <button onclick="saveWeight('exercise18-weight')">Save</button>
                 <button class="tech-button" onclick="showTechPopup('Russian Twists')">Tech</button>
             </li>
-            <!-- Add more exercises for Saturday here with checkboxes, weight input fields, and Tech buttons -->
-        </ul>
-
-        <!-- Sunday -->
-        <h2>Sunday</h2>
-        <ul id="sunday-list">
             <li>
-                <input type="checkbox" id="exercise19"> Rest Day
+                <input type="checkbox" id="exercise19"> Leg Raises (3 sets of 12-15 reps)
+                <input type="text" id="exercise19-weight" placeholder="Weight">
+                <button onclick="saveWeight('exercise19-weight')">Save</button>
+                <button class="tech-button" onclick="showTechPopup('Leg Raises')">Tech</button>
             </li>
+            <li>
+                <input type="checkbox" id="exercise20"> Bicycle Crunches (3 sets of 12-15 reps per side)
+                <input type="text" id="exercise20-weight" placeholder="Weight">
+                <button onclick="saveWeight('exercise20-weight')">Save</button>
+                <button class="tech-button" onclick="showTechPopup('Bicycle Crunches')">Tech</button>
+            </li>
+            <!-- Add more core exercises for Thursday here -->
         </ul>
 
-        <button id="reset-button">Reset</button>
-    </div>
-    <script>
-        // JavaScript functions go here
+        <!-- Friday (Arm Day) -->
+        <h2>Friday (Arm Day)</h2>
+        <ul id="friday-list">
+            <li>
+                <input type="checkbox" id="exercise21"> Warm-Up
+            </li>
+            <li>
+                <input type="checkbox" id="exercise22"> Push-Ups (3 sets of 10-12 reps)
+                <input type="text" id="exercise22-weight" placeholder="Weight">
+                <button onclick="saveWeight('exercise22-weight')">Save</button>
+                <button class="tech-button" onclick="showTechPopup('Push-Ups')">Tech</button>
+            </li>
+            <li>
+                <input type="checkbox" id="exercise23"> Dumbbell Curls (3 sets of 10-12 reps)
+                <input type="text" id="exercise23-weight" placeholder="Weight">
+                <button onclick="saveWeight('exercise23-weight')">Save</button>
+                <button class="tech-button" onclick="showTechPopup('Dumbbell Curls')">Tech</button>
+            </li>
+            <li>
+                <input type="checkbox" id="exercise24"> Tricep Kickbacks (3 sets of 10-12 reps per arm)
+                <input type="text" id="exercise24-weight" placeholder="Weight">
+                <button onclick="saveWeight('exercise24-weight')">Save</button>
+                <button class="tech-button" onclick="showTechPopup('Tricep Kickbacks')">Tech</button>
+            </li>
+            <li>
+                <input type="checkbox" id="exercise25"> Hammer Curls (3 sets of 10-12 reps)
+                <input type="text" id="exercise25-weight" placeholder="Weight">
+                <button onclick="saveWeight('exercise25-weight')">Save</button>
+                <button class="tech-button" onclick="showTechPopup('Hammer Curls')">Tech</button>
+            </li>
+            <!-- Add more arm exercises for Friday here -->
+        </ul>
 
+        <!-- Reset Button -->
+        <button id="reset-button">Reset All</button>
+    </div>
+
+    <!-- JavaScript Code -->
+    <script>
         // Function to save weight for an exercise
         function saveWeight(exerciseId) {
             const weightInput = document.getElementById(exerciseId);
@@ -287,18 +275,44 @@
             // Replace with actual exercise technique and tips
             if (exerciseName === 'Push-Ups') {
                 return 'Push-Up Technique: Keep your body straight, engage your core, and lower your chest to the ground.';
-            } else if (exerciseName === 'Dumbbell Rows') {
-                return 'Dumbbell Rows Technique: Maintain a neutral spine, pull the dumbbell towards your hip.';
-            } else if (exerciseName === 'Russian Twists') {
-                return 'Russian Twists Technique: Sit on the floor, lean back slightly, and twist your torso to touch the ground on each side.';
-            } else if (exerciseName === 'Pull-Ups') {
-                return 'Pull-Ups Technique: Hang from a pull-up bar, palms facing away, and pull your body up until your chin is above the bar.';
-            } else if (exerciseName === 'Dumbbell Shoulder Press') {
-                return 'Dumbbell Shoulder Press Technique: Sit on a bench with back support, press the dumbbells overhead, and return to starting position.';
             } else if (exerciseName === 'Bench Press') {
                 return 'Bench Press Technique: Lie on a bench, lower the barbell to your chest, and press it back up.';
             } else if (exerciseName === 'Dumbbell Flyes') {
                 return 'Dumbbell Flyes Technique: Lie on a bench, open your arms wide, and squeeze your chest as you bring the dumbbells together.';
+            } else if (exerciseName === 'Bicep Curls') {
+                return 'Bicep Curls Technique: Stand with dumbbells in hand, curl the weights towards your shoulders.';
+            } else if (exerciseName === 'Tricep Dips') {
+                return 'Tricep Dips Technique: Use parallel bars, lower your body, and push back up to work the triceps.';
+            } else if (exerciseName === 'Squats') {
+                return 'Squats Technique: Stand with feet shoulder-width apart, lower your body by bending your knees, and return to the starting position.';
+            } else if (exerciseName === 'Lunges') {
+                return 'Lunges Technique: Step forward with one leg, lower your body, and return to the starting position.';
+            } else if (exerciseName === 'Plank') {
+                return 'Plank Technique: Support your body on your forearms and toes, keeping a straight line from head to heels.';
+            } else if (exerciseName === 'Russian Twists') {
+                return 'Russian Twists Technique: Sit on the floor, lean back slightly, and twist your torso to touch the ground on each side.';
+            } else if (exerciseName === 'Dumbbell Curls') {
+                return 'Dumbbell Curls Technique: Stand with dumbbells in hand, curl the weights towards your shoulders.';
+            } else if (exerciseName === 'Incline Bench Press') {
+                return 'Incline Bench Press Technique: Lie on an inclined bench, lower the barbell to your upper chest, and press it back up.';
+            } else if (exerciseName === 'Chest Flyes Machine') {
+                return 'Chest Flyes Machine Technique: Sit on the machine, open your arms wide, and squeeze your chest as you bring the handles together.';
+            } else if (exerciseName === 'Hammer Curls') {
+                return 'Hammer Curls Technique: Stand with dumbbells in hand, curl the weights with a neutral grip (palms facing each other).';
+            } else if (exerciseName === 'Skull Crushers') {
+                return 'Skull Crushers Technique: Lie on a bench, lower the EZ bar to your forehead, and extend your arms to work the triceps.';
+            } else if (exerciseName === 'Leg Press') {
+                return 'Leg Press Technique: Sit on the leg press machine, push the platform upwards with your legs, and fully extend your knees.';
+            } else if (exerciseName === 'Leg Curls') {
+                return 'Leg Curls Technique: Lie face down on the leg curl machine, curl your legs towards your buttocks, and control the movement.';
+            } else if (exerciseName === 'Leg Raises') {
+                return 'Leg Raises Technique: Hang from a pull-up bar or use a dip station, raise your legs until they are parallel to the ground.';
+            } else if (exerciseName === 'Bicycle Crunches') {
+                return 'Bicycle Crunches Technique: Lie on your back, alternate bringing your right elbow and left knee together, and twist your torso.';
+            } else if (exerciseName === 'Tricep Kickbacks') {
+                return 'Tricep Kickbacks Technique: Stand with a dumbbell in hand, extend your arm back, and squeeze your triceps.';
+            } else if (exerciseName === 'Hammer Curls') {
+                return 'Hammer Curls Technique: Stand with dumbbells in hand, curl the weights towards your shoulders with a neutral grip (palms facing each other).';
             } else {
                 return 'Exercise technique and tips will be provided here.';
             }
@@ -313,5 +327,19 @@
             <p id="tech-popup-content">Exercise technique and tips will be provided here.</p>
         </div>
     </div>
+
+    <script>
+        // Function to reset all checkboxes and weights
+        document.getElementById('reset-button').addEventListener('click', function () {
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            const weightInputs = document.querySelectorAll('input[type="text"]');
+            checkboxes.forEach(function (checkbox) {
+                checkbox.checked = false;
+            });
+            weightInputs.forEach(function (weightInput) {
+                weightInput.value = '';
+            });
+        });
+    </script>
 </body>
 </html>
