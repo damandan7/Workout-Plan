@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weekly Workout Plan</title>
+    <title>SHREDDED - Weekly Workout Plan</title>
     <style>
         body {
             background-color: #1d1d1d;
@@ -86,7 +86,7 @@
 </head>
 <body>
     <div id="container">
-        <h1>My Weekly Workout Plan</h1>
+        <h1>SHREDDED - My Weekly Workout Plan</h1>
         <h2>Monday</h2>
         <ul id="monday-list">
             <li>
@@ -103,151 +103,167 @@
                 <button onclick="saveWeight('exercise3-weight')">Save</button>
             </li>
             <!-- Add more exercises for Monday here with checkboxes and weight input fields -->
+            <li>
+                <input type="checkbox" id="exercise4"> Leg Press (3 sets of 10-12 reps)
+                <input type="text" id="exercise4-weight" placeholder="Weight">
+                <button onclick="saveWeight('exercise4-weight')">Save</button>
+            </li>
+            <li>
+                <input type="checkbox" id="exercise5"> Bicep Curls (3 sets of 12-15 reps per arm)
+                <input type="text" id="exercise5-weight" placeholder="Weight">
+                <button onclick="saveWeight('exercise5-weight')">Save</button>
+            </li>
         </ul>
 
         <h2>Tuesday</h2>
         <ul id="tuesday-list">
             <li>
-                <input type="checkbox" id="exercise4"> Cardio (20 minutes)
+                <input type="checkbox" id="exercise6"> Cardio (20 minutes)
             </li>
             <li>
-                <input type="checkbox" id="exercise5"> Plank (3 sets, hold for 30-60 seconds)
+                <input type="checkbox" id="exercise7"> Plank (3 sets, hold for 30-60 seconds)
             </li>
             <li>
-                <input type="checkbox" id="exercise6"> Russian Twists (3 sets of 12-15 reps per side)
-                <input type="text" id="exercise6-weight" placeholder="Weight">
-                <button onclick="saveWeight('exercise6-weight')">Save</button>
+                <input type="checkbox" id="exercise8"> Russian Twists (3 sets of 12-15 reps per side)
+                <input type="text" id="exercise8-weight" placeholder="Weight">
+                <button onclick="saveWeight('exercise8-weight')">Save</button>
             </li>
             <li>
-                <input type="checkbox" id="exercise7"> Leg Raises (3 sets of 12-15 reps)
-                <input type="text" id="exercise7-weight" placeholder="Weight">
-                <button onclick="saveWeight('exercise7-weight')">Save</button>
+                <input type="checkbox" id="exercise9"> Leg Raises (3 sets of 12-15 reps)
+                <input type="text" id="exercise9-weight" placeholder="Weight">
+                <button onclick="saveWeight('exercise9-weight')">Save</button>
             </li>
             <!-- Add more exercises for Tuesday here with checkboxes and weight input fields -->
+            <li>
+                <input type="checkbox" id="exercise10"> Lunges (3 sets of 10-12 reps per leg)
+                <input type="text" id="exercise10-weight" placeholder="Weight">
+                <button onclick="saveWeight('exercise10-weight')">Save</button>
+            </li>
+            <li>
+                <input type="checkbox" id="exercise11"> Dumbbell Bench Press (3 sets of 10-12 reps)
+                <input type="text" id="exercise11-weight" placeholder="Weight">
+                <button onclick="saveWeight('exercise11-weight')">Save</button>
+            </li>
         </ul>
 
         <h2>Wednesday</h2>
         <ul id="wednesday-list">
             <li>
-                <input type="checkbox" id="exercise8"> Pull-Ups (4 sets of 6-8 reps)
-                <input type="text" id="exercise8-weight" placeholder="Weight">
-                <button onclick="saveWeight('exercise8-weight')">Save</button>
-            </li>
-            <li>
-                <input type="checkbox" id="exercise9"> Dumbbell Shoulder Press (3 sets of 10-12 reps)
-                <input type="text" id="exercise9-weight" placeholder="Weight">
-                <button onclick="saveWeight('exercise9-weight')">Save</button>
-            </li>
-            <li>
-                <input type="checkbox" id="exercise10"> Bent-Over Dumbbell Rows (3 sets of 10-12 reps per arm)
-                <input type="text" id="exercise10-weight" placeholder="Weight">
-                <button onclick="saveWeight('exercise10-weight')">Save</button>
-            </li>
-            <li>
-                <input type="checkbox" id="exercise11"> Push-Ups (3 sets of 10-12 reps)
-                <input type="text" id="exercise11-weight" placeholder="Weight">
-                <button onclick="saveWeight('exercise11-weight')">Save</button>
-            </li>
-            <li>
-                <input type="checkbox" id="exercise12"> Bicep Hammer Curls (3 sets of 12-15 reps per arm)
+                <input type="checkbox" id="exercise12"> Pull-Ups (4 sets of 6-8 reps)
                 <input type="text" id="exercise12-weight" placeholder="Weight">
                 <button onclick="saveWeight('exercise12-weight')">Save</button>
             </li>
             <li>
-                <input type="checkbox" id="exercise13"> Tricep Kickbacks (3 sets of 10-12 reps per arm)
+                <input type="checkbox" id="exercise13"> Dumbbell Shoulder Press (3 sets of 10-12 reps)
                 <input type="text" id="exercise13-weight" placeholder="Weight">
                 <button onclick="saveWeight('exercise13-weight')">Save</button>
             </li>
-            <!-- Add more exercises for Wednesday here with checkboxes and weight input fields -->
+            <li>
+                <input type="checkbox" id="exercise14"> Bent-Over Dumbbell Rows (3 sets of 10-12 reps per arm)
+                <input type="text" id="exercise14-weight" placeholder="Weight">
+                <button onclick="saveWeight('exercise14-weight')">Save</button>
+            </li>
+            <li>
+                <input type="checkbox" id="exercise15"> Push-Ups (3 sets of 10-12 reps)
+            </li>
+            <li>
+                <input type="checkbox" id="exercise16"> Bicep Hammer Curls (3 sets of 12-15 reps per arm)
+                <input type="text" id="exercise16-weight" placeholder="Weight">
+                <button onclick="saveWeight('exercise16-weight')">Save</button>
+            </li>
+            <li>
+                <input type="checkbox" id="exercise17"> Tricep Kickbacks (3 sets of 10-12 reps per arm)
+                <input type="text" id="exercise17-weight" placeholder="Weight">
+                <button onclick="saveWeight('exercise17-weight')">Save</button>
+            </li>
         </ul>
 
         <h2>Thursday</h2>
         <ul id="thursday-list">
             <li>
-                <input type="checkbox" id="exercise14"> Cardio (20 minutes)
+                <input type="checkbox" id="exercise18"> Cardio (20 minutes)
             </li>
             <li>
-                <input type="checkbox" id="exercise15"> Plank (3 sets, hold for 30-60 seconds)
+                <input type="checkbox" id="exercise19"> Plank (3 sets, hold for 30-60 seconds)
             </li>
             <li>
-                <input type="checkbox" id="exercise16"> Russian Twists (3 sets of 12-15 reps per side)
-                <input type="text" id="exercise16-weight" placeholder="Weight">
-                <button onclick="saveWeight('exercise16-weight')">Save</button>
+                <input type="checkbox" id="exercise20"> Russian Twists (3 sets of 12-15 reps per side)
+                <input type="text" id="exercise20-weight" placeholder="Weight">
+                <button onclick="saveWeight('exercise20-weight')">Save</button>
             </li>
             <li>
-                <input type="checkbox" id="exercise17"> Leg Raises (3 sets of 12-15 reps)
-                <input type="text" id="exercise17-weight" placeholder="Weight">
-                <button onclick="saveWeight('exercise17-weight')">Save</button>
+                <input type="checkbox" id="exercise21"> Leg Raises (3 sets of 12-15 reps)
+                <input type="text" id="exercise21-weight" placeholder="Weight">
+                <button onclick="saveWeight('exercise21-weight')">Save</button>
             </li>
             <!-- Add more exercises for Thursday here with checkboxes and weight input fields -->
+            <li>
+                <input type="checkbox" id="exercise22"> Squats (3 sets of 10-12 reps)
+                <input type="text" id="exercise22-weight" placeholder="Weight">
+                <button onclick="saveWeight('exercise22-weight')">Save</button>
+            </li>
+            <li>
+                <input type="checkbox" id="exercise23"> Dumbbell Lunges (3 sets of 10-12 reps per leg)
+                <input type="text" id="exercise23-weight" placeholder="Weight">
+                <button onclick="saveWeight('exercise23-weight')">Save</button>
+            </li>
         </ul>
 
         <h2>Friday</h2>
         <ul id="friday-list">
             <li>
-                <input type="checkbox" id="exercise18"> Yoga (30 minutes)
+                <input type="checkbox" id="exercise24"> Cardio (30 minutes)
             </li>
             <li>
-                <input type="checkbox" id="exercise19"> Cool Down (10 minutes)
+                <input type="checkbox" id="exercise25"> Cool Down (10 minutes)
+            </li>
+            <li>
+                <input type="checkbox" id="exercise26"> Bench Press (3 sets of 8-10 reps)
+                <input type="text" id="exercise26-weight" placeholder="Weight">
+                <button onclick="saveWeight('exercise26-weight')">Save</button>
+            </li>
+            <li>
+                <input type="checkbox" id="exercise27"> Dumbbell Flyes (3 sets of 10-12 reps)
+                <input type="text" id="exercise27-weight" placeholder="Weight">
+                <button onclick="saveWeight('exercise27-weight')">Save</button>
+            </li>
+            <li>
+                <input type="checkbox" id="exercise28"> Incline Bench Press (3 sets of 8-10 reps)
+                <input type="text" id="exercise28-weight" placeholder="Weight">
+                <button onclick="saveWeight('exercise28-weight')">Save</button>
+            </li>
+            <li>
+                <input type="checkbox" id="exercise29"> Lat Pulldowns (3 sets of 10-12 reps)
+                <input type="text" id="exercise29-weight" placeholder="Weight">
+                <button onclick="saveWeight('exercise29-weight')">Save</button>
             </li>
             <!-- Add more exercises for Friday here with checkboxes and weight input fields -->
+            <li>
+                <input type="checkbox" id="exercise30"> Dumbbell Shrugs (3 sets of 12-15 reps per arm)
+                <input type="text" id="exercise30-weight" placeholder="Weight">
+                <button onclick="saveWeight('exercise30-weight')">Save</button>
+            </li>
+            <li>
+                <input type="checkbox" id="exercise31"> Tricep Dips (3 sets of 10-12 reps)
+                <input type="text" id="exercise31-weight" placeholder="Weight">
+                <button onclick="saveWeight('exercise31-weight')">Save</button>
+            </li>
         </ul>
 
         <button id="reset-button">Reset</button>
     </div>
     <script>
-        // Function to save weight in localStorage
-        function saveWeight(inputId) {
-            const inputElement = document.getElementById(inputId);
-            const weight = inputElement.value;
-            localStorage.setItem(inputId, weight);
+        // JavaScript functions go here
+
+        // Function to save weight for an exercise
+        function saveWeight(exerciseId) {
+            const weightInput = document.getElementById(exerciseId);
+            const weightValue = weightInput.value;
+
+            // You can save the weight value to local storage or a database here
+            // For this example, we'll just log it to the console
+            console.log(`Saved weight for ${exerciseId}: ${weightValue} lbs`);
         }
-
-        // Function to load weight from localStorage
-        function loadWeight(inputId) {
-            const weight = localStorage.getItem(inputId);
-            if (weight !== null) {
-                const inputElement = document.getElementById(inputId);
-                inputElement.value = weight;
-            }
-        }
-
-        // Call loadWeight for each exercise input on page load
-        window.onload = function () {
-            loadWeight('exercise2-weight');
-            loadWeight('exercise3-weight');
-            loadWeight('exercise6-weight');
-            loadWeight('exercise7-weight');
-            loadWeight('exercise8-weight');
-            loadWeight('exercise9-weight');
-            loadWeight('exercise10-weight');
-            loadWeight('exercise11-weight');
-            loadWeight('exercise12-weight');
-            loadWeight('exercise13-weight');
-            loadWeight('exercise16-weight');
-            loadWeight('exercise17-weight');
-            // Call loadWeight for other exercise inputs here
-        };
-
-        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-        const resetButton = document.getElementById('reset-button');
-
-        checkboxes.forEach((checkbox, index) => {
-            checkbox.addEventListener('change', function () {
-                if (this.checked) {
-                    checkboxes[index].parentNode.classList.add('checked');
-                } else {
-                    checkboxes[index].parentNode.classList.remove('checked');
-                }
-            });
-        });
-
-        resetButton.addEventListener('click', function () {
-            checkboxes.forEach((checkbox) => {
-                checkbox.checked = false;
-                checkbox.parentNode.classList.remove('checked');
-            });
-        });
     </script>
 </body>
 </html>
